@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gold Price Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Gold Price Prediction</h1>
+        <form method="POST" action="/">
+            <label for="input_date">Enter a date (YYYY-MM-DD):</label>
+            <input type="date" id="input_date" name="input_date" required>
+            <button type="submit">Predict</button>
+        </form>
+        {% if predicted_price %}
+        <p>Predicted Gold Price on {{ request.form['input_date'] }}: Rs.{{ predicted_price }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
