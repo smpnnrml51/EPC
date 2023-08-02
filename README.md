@@ -1,1 +1,1 @@
-# EPC
+Gold price prediction web app.
